@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const CREATE = "week3_assignment/bucket/CREATE"
-const READ = "week3_assignment/bucket/READ"
+// const CREATE = "week3_assignment/bucket/CREATE"
+// const READ = "week3_assignment/bucket/READ"
 
 const bucketSlice = createSlice({
   name: "bucket",
@@ -10,7 +10,10 @@ const bucketSlice = createSlice({
     CREATE: (state, action) => {
       state.push(action.payload);
     },
-    READ: (state, action) => state
+    READ: (state, action) => {
+      state[action.payload.id].ongoing = action.payload.ongoing;
+
+    }
   }
 })
 

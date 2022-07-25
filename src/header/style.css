@@ -1,0 +1,30 @@
+.App--Header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  color:#ffffff;
+
+  padding: 0.5rem 0;
+}
+
+.App--Header {
+  background-color: #658A9E;
+}
+
+.App--Header span:first-child {
+  font-size: 1.5rem;
+  
+  padding-left: 1rem;
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.App--Header span:last-child {
+  font-size: 1.5rem;
+
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: 0;
+}

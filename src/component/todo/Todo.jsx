@@ -19,11 +19,11 @@ function Todo (props) {
             dispatch(bucketSlice.actions.DELETE({
             id: elem.id
           }))}>삭제하기</button>
-            <button className='button__check' type="button" onClick={() => 
+            <button className='button__check' type="button" onClick={() => {
               dispatch(bucketSlice.actions.UPDATE({
               id: elem.id,
               ongoing:"Done"
-            }))}>완료</button>
+            }))}}>완료</button>
         </div>
       </div> : false
   ) :
@@ -37,11 +37,11 @@ function Todo (props) {
             dispatch(bucketSlice.actions.DELETE({
             id: elem.id
           }))}>삭제하기</button>
-          <button className='button__check' type="button" onClick={() => 
+          <button className='button__check' type="button" onClick={() => {
             dispatch(bucketSlice.actions.UPDATE({
             id: elem.id,
             ongoing:"Working"
-          }))}>취소</button>
+          }))}}>취소</button>
         </div>
       </div> : false
   )

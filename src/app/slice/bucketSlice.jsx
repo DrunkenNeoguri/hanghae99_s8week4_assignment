@@ -1,21 +1,28 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 // const CREATE = "week3_assignment/bucket/CREATE"
-// const READ = "week3_assignment/bucket/READ"
+// const UPDATE = "week3_assignment/bucket/UPDATE"
+// const DELETE = "week3_assignment/bucket/DELETE"
 
 const bucketSlice = createSlice({
   name: "bucket",
   initialState: [],
   reducers: {
     CREATE: (state, action) => {
-      state.push(action.payload);
+      let newState = [...state]
+      newState.push(action.payload);
+      newState.sort((a, b) => a.id - b.id);
+      return newState;
     },
     UPDATE: (state, action) => {
-      state[action.payload.id].ongoing = action.payload.ongoing;
+      for (let i = 0; i < state.length; i++) {
+        if (state[i].id === action.payload.id) {
+          state[i].ongoing = action.payload.ongoing;
+        }
+      }
     },
     DELETE: (state, action) => {
-      state = [...state].filter(prop => {return prop.id !== action.payload.id})
-      console.log(action.payload.id)
+      return[...state].filter(prop => {return prop.id !== action.payload.id})
     }
   }
 })

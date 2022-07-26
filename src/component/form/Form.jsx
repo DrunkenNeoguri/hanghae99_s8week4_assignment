@@ -14,13 +14,23 @@ function Form(props) {
       <input type="text" className="App--Form__title" />
       <span>내용</span>
       <input type="text" className="App--Form__context" />
-      <button type="button" className="App--Form__button" onClick={() => 
-          dispatch(bucketSlice.actions.CREATE({
-          id: bucket.length,
-          title: document.querySelector(".App--Form__title").value,
-          context: document.querySelector(".App--Form__context").value,
-          ongoing:"Working"
-        }))}
+      <button type="button" className="App--Form__button" onClick={() => {
+            let _id = bucket.length;
+            for (let i = 0; i < _id; i++) {
+              if (bucket[i].id !== i) {
+                _id = i;
+                break
+              }
+            }
+            dispatch(bucketSlice.actions.CREATE({
+            id: _id,
+            title: document.querySelector(".App--Form__title").value,
+            context: document.querySelector(".App--Form__context").value,
+            ongoing:"Working"
+            }))
+            document.querySelector(".App--Form__title").value = "";
+            document.querySelector(".App--Form__context").value = "";
+        }}
         >추가하기</button>
     </form>
   )

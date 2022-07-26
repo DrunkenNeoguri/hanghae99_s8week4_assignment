@@ -15,9 +15,12 @@ function Todo (props) {
         <h2>{elem.title}</h2>
         <p>{elem.context}</p>
         <div>
-        <button value={elem.id} className='button__delete' type="button">삭제하기</button>
-            <button value={elem.id} className='button__check' type="button" onClick={() => 
-              dispatch(bucketSlice.actions.READ({
+        <button className='button__delete' type="button" onClick={() => 
+            dispatch(bucketSlice.actions.DELETE({
+            id: elem.id
+          }))}>삭제하기</button>
+            <button className='button__check' type="button" onClick={() => 
+              dispatch(bucketSlice.actions.UPDATE({
               id: elem.id,
               ongoing:"Done"
             }))}>완료</button>
@@ -30,9 +33,12 @@ function Todo (props) {
         <h2>{elem.title}</h2>
         <p>{elem.context}</p>
         <div>
-          <button value={elem.id} className='button__delete' type="button">삭제하기</button>
-          <button value={elem.id} className='button__check' type="button" onClick={() => 
-            dispatch(bucketSlice.actions.READ({
+          <button className='button__delete' type="button" onClick={() => 
+            dispatch(bucketSlice.actions.DELETE({
+            id: elem.id
+          }))}>삭제하기</button>
+          <button className='button__check' type="button" onClick={() => 
+            dispatch(bucketSlice.actions.UPDATE({
             id: elem.id,
             ongoing:"Working"
           }))}>취소</button>

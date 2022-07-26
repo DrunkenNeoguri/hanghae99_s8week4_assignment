@@ -10,9 +10,12 @@ const bucketSlice = createSlice({
     CREATE: (state, action) => {
       state.push(action.payload);
     },
-    READ: (state, action) => {
+    UPDATE: (state, action) => {
       state[action.payload.id].ongoing = action.payload.ongoing;
-
+    },
+    DELETE: (state, action) => {
+      state = [...state].filter(prop => {return prop.id !== action.payload.id})
+      console.log(action.payload.id)
     }
   }
 })

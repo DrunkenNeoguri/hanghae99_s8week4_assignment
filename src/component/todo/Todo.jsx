@@ -10,7 +10,7 @@ function Todo (props) {
   return (
   props.type === "Working" ? 
   bucket.map((elem) => 
-    elem.ongoing === "Working" ? 
+    elem.isDone === false ? 
       <div className="Working__list__block">
         <h2>{elem.title}</h2>
         <p>{elem.context}</p>
@@ -22,13 +22,13 @@ function Todo (props) {
             <button className='button__check' type="button" onClick={() => {
               dispatch(bucketSlice.actions.UPDATE({
               id: elem.id,
-              ongoing:"Done"
+              isDone:true
             }))}}>완료</button>
         </div>
       </div> : false
   ) :
   bucket.map((elem) => 
-    elem.ongoing === "Done" ? 
+    elem.isDone === true ? 
       <div className="Done__list__block">
         <h2>{elem.title}</h2>
         <p>{elem.context}</p>
@@ -40,7 +40,7 @@ function Todo (props) {
           <button className='button__check' type="button" onClick={() => {
             dispatch(bucketSlice.actions.UPDATE({
             id: elem.id,
-            ongoing:"Working"
+            isDone:false
           }))}}>취소</button>
         </div>
       </div> : false

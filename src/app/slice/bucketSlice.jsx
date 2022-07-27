@@ -17,7 +17,8 @@ const bucketSlice = createSlice({
     UPDATE: (state, action) => {
       for (let i = 0; i < state.length; i++) {
         if (state[i].id === action.payload.id) {
-          state[i].ongoing = action.payload.ongoing;
+          console.log(state[i].isDone, action.payload.isDone);
+          state[i].isDone = action.payload.isDone;
         }
       }
     },

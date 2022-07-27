@@ -26,7 +26,7 @@ function Form(props) {
             id: _id,
             title: document.querySelector(".App--Form__title").value,
             context: document.querySelector(".App--Form__context").value,
-            ongoing:"Working"
+            isDone:false
             }))
             document.querySelector(".App--Form__title").value = "";
             document.querySelector(".App--Form__context").value = "";

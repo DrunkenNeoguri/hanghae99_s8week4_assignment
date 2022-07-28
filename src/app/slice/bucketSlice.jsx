@@ -6,7 +6,20 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const bucketSlice = createSlice({
   name: "bucket",
-  initialState: [],
+  initialState: [
+    {
+      id: 0,
+      title: "리액트 공부하기",
+      context: "리액트 기초를 공부해봅시다.",
+      isDone: false,
+    },
+    {
+      id: 1,
+      title: "리액트 공부하기",
+      context: "리액트 기초를 공부해봅시다.",
+      isDone: true,
+    },
+  ],
   reducers: {
     CREATE: (state, action) => {
       let newState = [...state]
@@ -17,7 +30,6 @@ const bucketSlice = createSlice({
     UPDATE: (state, action) => {
       for (let i = 0; i < state.length; i++) {
         if (state[i].id === action.payload.id) {
-          console.log(state[i].isDone, action.payload.isDone);
           state[i].isDone = action.payload.isDone;
         }
       }

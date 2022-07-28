@@ -9,13 +9,13 @@ function List() {
       <div className="container--body--Working">
         <span>Working.. 🔥</span>
         <div className="container--body--Working__list">
-          <Todo type="Working" />
+          <Todo key="Working" type="Working" />
         </div>
       </div>
       <div className="container--body--Done">
         <span>Done..! 🎉</span>
           <div className="container--body--Done__list">
-            <Todo type="Done" />
+            <Todo key="Done" type="Done" />
           </div>
       </div>
     </div>

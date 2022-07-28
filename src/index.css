@@ -27,6 +27,6 @@ code {
 footer {
   display: flex;
   justify-content: center;
-  margin: 1rem auto;
+  margin: 2rem auto;
   font-size: 0.5rem;
 }

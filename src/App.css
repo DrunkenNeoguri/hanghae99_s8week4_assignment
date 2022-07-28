@@ -18,3 +18,11 @@
 
   padding: 0.5rem 0;
 }
+
+.LoadingMessage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  margin: 16rem auto;
+}

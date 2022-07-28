@@ -11,7 +11,7 @@ function Todo (props) {
   props.type === "Working" ? 
   bucket.map((elem) => 
     elem.isDone === false ? 
-      <div className="Working__list__block">
+      <div key={elem.id} className="Working__list__block">
         <h2>{elem.title}</h2>
         <p>{elem.context}</p>
         <div>
@@ -29,7 +29,7 @@ function Todo (props) {
   ) :
   bucket.map((elem) => 
     elem.isDone === true ? 
-      <div className="Done__list__block">
+      <div key={elem.id} className="Done__list__block">
         <h2>{elem.title}</h2>
         <p>{elem.context}</p>
         <div>

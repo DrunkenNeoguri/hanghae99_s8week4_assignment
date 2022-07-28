@@ -55,8 +55,8 @@ function Form(props) {
     }))
     // 어차피 앞에서 내용은 다 기입됐겠다, id만 적용해주면 되는 게 아닐까?
     // setForm(initialState)
-    titleInput = "";
-    contextInput = "";
+    titleRef.current.value = "";
+    contextRef.current.value = "";
 }
 
 

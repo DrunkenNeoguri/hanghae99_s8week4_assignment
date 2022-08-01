@@ -7,18 +7,6 @@
   box-sizing: border-box;
 }
 
-.App--Header, .App--Form  {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-
-  font-size: 2rem;
-  color:#ffffff;
-
-  padding: 0.5rem 0;
-}
-
 .LoadingMessage {
   display: flex;
   justify-content: center;

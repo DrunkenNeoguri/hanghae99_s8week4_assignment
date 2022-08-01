@@ -1,22 +1,16 @@
-import { useState, useEffect } from 'react';
 import './App.css';
-import TodoList from './component/pages/TodoList';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Detail from './pages/Detail';
 
 function App() {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    setLoading(false)
-  }, [])
-
   return (
-    <div className="App">
-      { loading === true ? <h1 className='LoadingMessage'>로딩중입니다.</h1> : <>
-          <TodoList />
-          <footer>이 페이지에는 마비노기가 제공한 마비옛체 서체가 적용되어 있습니다.</footer>
-        </>}
-      </div>
-  );
+    <Router>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/detail/:id' element={<Detail />} exact />
+      </Routes>
+    </Router>
+  )
 }
-
 export default App;

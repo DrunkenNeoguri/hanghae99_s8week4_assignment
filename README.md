@@ -1,46 +1,60 @@
-# Getting Started with Create React App and Redux
+# 과제 파일 구조 안내
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+src  
+├── app  
+│ ├── store.jsx  
+│ └── slice  
+│ └── bucketSlice.jsx  
+│  
+├── component  
+│ ├── common  
+│ │ └── Header.jsx  
+│ └── features  
+│ ├── Form.jsx  
+│ ├── List.jsx  
+│ └── Todo.jsx  
+│
+├── layout  
+│ └── Layout.jsx  
+│  
+├── pages  
+│ ├── Detail.jsx  
+│ └── Home.jsx  
+│  
+├── App.css  
+├── App.js  
+├── index.css  
+├── index.js  
+└── logo.svg
 
-## Available Scripts
+## app
 
-In the project directory, you can run:
+- react 외부의 library를 관리하는 폴더입니다.
+- Redux를 관리하는 store는 app에, slice를 관리하는 bucketSlice.jsx는 slice 폴더에 추가했습니다.
 
-### `npm start`
+## component
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 컴포넌트들을 관리하는 폴더입니다.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### common
 
-### `npm test`
+- 컴포넌트 중에 화면에 공통적으로 쓰이는 컴포넌트들이 배치됩니다.
+- Header 같은 UI 컴포넌트들이 주로 이쪽에 배치됩니다.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### features
 
-### `npm run build`
+- 각 화면에 동작하는 특정한 기능들을 담당하는 컴포넌트들이 배치됩니다.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Layout
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- 페이지의 구성을 담당하는 layout.jsx를 해당 폴더에서 관리하고 있습니다.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## pages
 
-### `npm run eject`
+- 사용자가 접하게 되는 큰 틀, 즉 페이지를 관리하는 폴더입니다.
+- 자잘한 기능들을 담당하는 컴포넌트와 달리, 페이지 자체를 담당하는 컴포넌트들이 배치됩니다.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## app.js
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- react에서 관리하는 route들을 해당 파일에서 관리합니다.
+- 화면의 관리는 layout과 pages에서 하되, app 내에 연결되는 사항들을 해당 파일에서 연결되도록 했습니다.

@@ -8,7 +8,7 @@ src
 │  
 ├── component  
 │　　　├── common  
-│　　　│     └── Header.jsx  
+│　　　│　　　└── Header.jsx  
 │　　　└── features  
 │　　　　　　└── Form.jsx  
 │　　　　　　└── List.jsx  

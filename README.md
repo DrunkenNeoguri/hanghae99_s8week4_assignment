@@ -1,3 +1,5 @@
+# 과제 파일 구조 안내
+
 src  
 ├── app  
 │　　├── store.jsx  

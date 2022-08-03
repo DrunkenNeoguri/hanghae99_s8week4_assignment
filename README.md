@@ -4,22 +4,22 @@ src
 ├── app  
 │ ├── store.jsx  
 │ └── slice  
-│ └── bucketSlice.jsx  
+│       └── bucketSlice.jsx  
 │  
 ├── component  
 │ ├── common  
-│ │ └── Header.jsx  
+│ │     └── Header.jsx  
 │ └── features  
-│ ├── Form.jsx  
-│ ├── List.jsx  
-│ └── Todo.jsx  
+│       └── Form.jsx  
+│       └── List.jsx  
+│       └──  Todo.jsx  
 │
 ├── layout  
-│ └── Layout.jsx  
+│     └── Layout.jsx  
 │  
 ├── pages  
-│ ├── Detail.jsx  
-│ └── Home.jsx  
+│     ├── Detail.jsx  
+│     └── Home.jsx  
 │  
 ├── App.css  
 ├── App.js  

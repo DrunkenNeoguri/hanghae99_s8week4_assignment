@@ -1,28 +1,28 @@
 src
-├── app
-│　　├── store.jsx
-│　　└── slice
-│　　　　　└── bucketSlice.jsx
-│
-├── component
-│　　　├── common
-│　　　│　　　└── Header.jsx
-│　　　└── features
-│　　　　　　└── Form.jsx
-│　　　　　　└── List.jsx
-│　　　　　　└── Todo.jsx
-├── layout
-│　　　└── Layout.jsx
-│
-├── pages
-│　　　├── Detail.jsx
-│　　　└── Home.jsx
-│
-├── App.css
-├── App.js
-├── index.css
-├── index.js
-└── logo.svg
+├── app  
+│　　├── store.jsx  
+│　　└── slice  
+│　　　　　└── bucketSlice.jsx  
+│  
+├── component  
+│　　　├── common  
+│　　　│　　　└── Header.jsx  
+│　　　└── features  
+│　　　　　　└── Form.jsx  
+│　　　　　　└── List.jsx  
+│　　　　　　└── Todo.jsx  
+├── layout  
+│　　　└── Layout.jsx  
+│  
+├── pages  
+│　　　├── Detail.jsx  
+│　　　└── Home.jsx  
+│  
+├── App.css  
+├── App.js  
+├── index.css  
+├── index.js  
+└── logo.svg  
 
 ## app
 

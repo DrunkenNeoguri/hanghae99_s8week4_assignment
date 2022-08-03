@@ -1,30 +1,27 @@
-# 과제 파일 구조 안내
-
-src  
-├── app  
-│　　├── store.jsx  
-│　　└── slice  
-│　　　　　└── bucketSlice.jsx  
-│  
-├── component  
-│　　　├── common  
-│　　　│　　　└── Header.jsx  
-│　　　└── features  
-│　　　　　　└── Form.jsx  
-│　　　　　　└── List.jsx  
-│　　　　　　└──  Todo.jsx  
+src
+├── app
+│　　├── store.jsx
+│　　└── slice
+│　　　　　└── bucketSlice.jsx
 │
-├── layout  
-│　　　└── Layout.jsx  
-│  
-├── pages  
-│　　　├── Detail.jsx  
-│　　　└── Home.jsx  
-│  
-├── App.css  
-├── App.js  
-├── index.css  
-├── index.js  
+├── component
+│　　　├── common
+│　　　│　　　└── Header.jsx
+│　　　└── features
+│　　　　　　└── Form.jsx
+│　　　　　　└── List.jsx
+│　　　　　　└── Todo.jsx
+├── layout
+│　　　└── Layout.jsx
+│
+├── pages
+│　　　├── Detail.jsx
+│　　　└── Home.jsx
+│
+├── App.css
+├── App.js
+├── index.css
+├── index.js
 └── logo.svg
 
 ## app
